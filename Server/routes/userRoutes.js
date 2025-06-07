@@ -14,7 +14,5 @@ router.get('/',authMiddleware,getUsers)
 router.patch('/:id',authMiddleware,editUser)
 router.get('/:id/follow',authMiddleware,followUser)
 router.post('/avatar',authMiddleware,changeUserAvatar)
-router.get('/:id/posts',authMiddleware,getuserPosts
-
-)
+router.get('/:id/posts',authMiddleware,getuserPosts )
 export default router;
