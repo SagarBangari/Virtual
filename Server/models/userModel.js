@@ -11,7 +11,7 @@ import { Schema,model } from "mongoose";
     following : [{type:Schema.Types.ObjectId , ref:"User"}],
     bookmarks : [{type:Schema.Types.ObjectId , ref:"Post"}],
     posts : [{type:Schema.Types.ObjectId , ref:"Post"}],
-})
+},{timestamps:true})
 const User = model("User", userSchema);
 
 export default User;
