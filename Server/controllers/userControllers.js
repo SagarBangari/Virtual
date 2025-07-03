@@ -60,7 +60,7 @@ export const loginUser =async (req,res,next) =>{
             return next(new HttpError("Invalid credentials",422))
         }
         const token = await jwt.sign({id:user?._id},process.env.JWT_SECRET,{expiresIn:"1h"})
-        res.json({token,user}).status(200)
+        res.json({token,id:user.id,profilePhoto:user.profile_photo}).status(200)
     }catch(error){
       return next(new HttpError(error))
     }
