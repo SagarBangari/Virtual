@@ -9,23 +9,23 @@ const uiSlice = createSlice({
     initialState ,
     reducers : {
         openThemeModal : state=>{
-                state.themeModalIsOpen = true
+                state.themeModalIsOpen = true;
         } ,
         closeThemeModal : state=>{
-                state.themeModalIsOpen = false
+                state.themeModalIsOpen = false;
         } ,
-        openThemeModal : (state,action)=>{
-                state.theme = action.payload
+        changeTheme : (state,action)=>{
+                state.theme = action.payload;
         } ,
         openEditProfileModal :state=>{
-            state.editProfileModalOpen = true
+            state.editProfileModalOpen = true;
         },
         closeEditProfileModal :state=>{
-            state.editProfileModalOpen = false
+            state.editProfileModalOpen = false;
         },
         openEditPostModal :(state,action)=>{
-            state.editPostModalOpen = true
-            state.editPostId = action.payload
+            state.editPostModalOpen = true;
+            state.editPostId = action.payload;
         },
         closeEditPostModal :state=>{
             state.editPostModalOpen = false
